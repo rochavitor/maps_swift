@@ -10,6 +10,8 @@ import UIKit
 
 class CelulaTeatros: UITableViewCell {
 
+
+    @IBOutlet weak var Teatros: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
