@@ -24,3 +24,4 @@ class CelulaTeatros: UITableViewCell {
     }
 
 }
+//hue

@@ -5,7 +5,11 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
+<<<<<<< HEAD
 	<string>48232105-825A-4708-A7AF-21FE1F5288E1</string>
+=======
+	<string>2211BE84-FCB9-47D3-AC5A-61A2FD735572</string>
+>>>>>>> 114d805d641219c4a18dfc1ef28ef55f7ee43468
 	<key>IDESourceControlProjectName</key>
 	<string>maps_swift</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
