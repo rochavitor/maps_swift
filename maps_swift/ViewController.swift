@@ -26,11 +26,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     ///Identifier da célula da tableview Cidades
     let CidadeReuseIdentifier: String = "CidadeReuseIdentifier"
     
-    ///Segunda table view. Com os teatros
+    /*
+///Segunda table view. Com os teatros
     @IBOutlet weak var Teatros: UITableView!
     ///Identifier da célula da tableview Teatros
     let TeatrosReuseIdentifier: String = "TeatrosReuseIdentifier"
-    
+    */
     
     ///Controla a cidade que vai ser chamada pela tableview Teatros
     var CidadeEscolhida = 0
