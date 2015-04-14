@@ -13,7 +13,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        //self.Cidades.registerClass(CelulaCidades().self, forCellReuseIdentifier: CidadeReuseIdentifier!)
         
     }
 
@@ -53,7 +52,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     ///Define o conteúdo de cada célula, conforme seu indexPath (número da linha)
     func tableView(Cidades: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     
-        ///Declara e cria a çelula a partir da célula criada em CelulaCidades
+        ///Declara e cria a çelula a partir da célula definida em CelulaCidades
         let Celula: CelulaCidades = self.Cidades.dequeueReusableCellWithIdentifier(CidadeReuseIdentifier, forIndexPath: indexPath) as! CelulaCidades
         //Iguala o texto da label Cidade, da celula, ao nome da Cidade do mesmo indexPath da ListaCidades
         Celula.Cidade.text = ListaCidades[indexPath.row]
@@ -63,7 +62,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     //Faz com que cidade escolhida recebe o número da linha clicada, para depois usarmos para escolher a outra lista a ser utilizada na outra tableview
     func tableView(Cidades: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        CidadeEscolhida = indexPath.row
+        //CidadeEscolhida = indexPath.row
+        println(ListaCidades[indexPath.row])
         }
     
 }
