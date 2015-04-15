@@ -97,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1267.5" y="678"/>
+            <point key="canvasLocation" x="355.5" y="1368"/>
         </scene>
         <!--Table View2VC-->
         <scene sceneID="qHE-fv-ttU">
@@ -144,6 +144,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="Teatro" destination="8CR-T9-BnW" id="6ru-Cx-B9p"/>
+                                            <segue destination="4mA-y3-cfJ" kind="show" identifier="GoToMaps" id="4Ig-ch-Pfw"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -175,7 +176,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rEe-9K-vtc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2275.5" y="678"/>
+            <point key="canvasLocation" x="1369.5" y="1368"/>
+        </scene>
+        <!--MapsVC-->
+        <scene sceneID="g3A-jl-yFa">
+            <objects>
+                <viewController id="4mA-y3-cfJ" customClass="MapsVC" customModule="maps_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="U5Q-02-h27"/>
+                        <viewControllerLayoutGuide type="bottom" id="KQl-q9-hus"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WEg-49-hfo">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eJY-5h-FKh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1369.5" y="678.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jZe-Ap-SL8">

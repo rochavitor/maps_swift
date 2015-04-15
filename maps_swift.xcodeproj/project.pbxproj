@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DA2D573F1ADDB1C300367059 /* TableView2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D573E1ADDB1C300367059 /* TableView2VC.swift */; };
+		FF5237A01ADEBB2D0090D72F /* MapsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF52379F1ADEBB2D0090D72F /* MapsVC.swift */; };
 		FF8490671ADD498800AD77AB /* CelulaCidades.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8490661ADD498800AD77AB /* CelulaCidades.swift */; };
 		FF8490691ADD4A4400AD77AB /* CelulaTeatros.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8490681ADD4A4400AD77AB /* CelulaTeatros.swift */; };
 		FFEFEFA01ADD35A800E6CD0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEFEF9F1ADD35A800E6CD0E /* AppDelegate.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		DA2D573E1ADDB1C300367059 /* TableView2VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView2VC.swift; sourceTree = "<group>"; };
+		FF52379F1ADEBB2D0090D72F /* MapsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsVC.swift; sourceTree = "<group>"; };
 		FF8490661ADD498800AD77AB /* CelulaCidades.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CelulaCidades.swift; sourceTree = "<group>"; };
 		FF8490681ADD4A4400AD77AB /* CelulaTeatros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CelulaTeatros.swift; path = ../CelulaTeatros.swift; sourceTree = "<group>"; };
 		FFEFEF9A1ADD35A800E6CD0E /* maps_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = maps_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +91,7 @@
 				FFEFEF9F1ADD35A800E6CD0E /* AppDelegate.swift */,
 				FFEFEFA11ADD35A800E6CD0E /* ViewController.swift */,
 				DA2D573E1ADDB1C300367059 /* TableView2VC.swift */,
+				FF52379F1ADEBB2D0090D72F /* MapsVC.swift */,
 				FFEFEFA61ADD35A800E6CD0E /* Images.xcassets */,
 				FFEFEFA81ADD35A800E6CD0E /* LaunchScreen.xib */,
 				FFEFEF9D1ADD35A800E6CD0E /* Supporting Files */,
@@ -226,6 +229,7 @@
 				FFEFEFA01ADD35A800E6CD0E /* AppDelegate.swift in Sources */,
 				FF8490691ADD4A4400AD77AB /* CelulaTeatros.swift in Sources */,
 				FF8490671ADD498800AD77AB /* CelulaCidades.swift in Sources */,
+				FF5237A01ADEBB2D0090D72F /* MapsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

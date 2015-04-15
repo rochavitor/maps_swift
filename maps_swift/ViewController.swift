@@ -23,7 +23,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     ///Controla a cidade que vai ser chamada pela tableview Teatros
-    var CidadeEscolhida = "nill"
+    
     
     ///Array com cidades
     var ListaCidades = ["Campinas", "São Paulo", "Holambra", "Jacareí", "Paulínia"]
@@ -54,7 +54,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
            
             
             //Usa o index recebido para escolher qual item da ListaCidades deve ser passado para a CidadeEscolhida, declarada na viewController seguinte
-            CidadeEscolhida = ListaCidades[indexPath!.row]
+            let CidadeEscolhida = ListaCidades[indexPath!.row]
             
             
             //Escolhe a próxima view controller a ser mostrada
