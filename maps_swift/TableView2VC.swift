@@ -150,6 +150,11 @@ func tableView(Teatros: UITableView, didDeselectRowAtIndexPath indexPath: NSInde
     override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
         if (segue!.identifier == "GoToTeatro") {
             
+            
+            //Necessario codificar o prepareforsegue para pegar o endereço do teatro selecionado e jogar na variavel address do MapViewVC para o Maps abrir com este endereço selecionado.
+           
+            
+            /*
             //declar o indexPath. Ele puxa o index da célula selecionada da tableView Cidades
             let indexPath = Teatros.indexPathForSelectedRow()
             
@@ -159,8 +164,8 @@ func tableView(Teatros: UITableView, didDeselectRowAtIndexPath indexPath: NSInde
             
             
             //Escolhe a próxima view controller a ser mostrada
-            let tableView2VC:TableView2VC = segue!.destinationViewController as! TableView2VC
-            tableView2VC.Escolhida = CidadeEscolhida
+            let mapViewVC:MapViewVC = segue!.destinationViewController as! MapViewVC
+            mapViewVC.Escolhida = CidadeEscolhida*/
             
         }
     }
