@@ -39,35 +39,35 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="04g-zU-xZg" id="GsD-oD-scy">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lista de Cidades" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7C-vH-bmh">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hK-cG-CWY">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="54" y="16" width="266" height="60"/>
+                                                        <rect key="frame" x="8" y="31" width="42" height="21"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
                                             <variation key="default">
                                                 <mask key="subviews">
-                                                    <exclude reference="Y7C-vH-bmh"/>
+                                                    <exclude reference="4hK-cG-CWY"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
                                                 <mask key="subviews">
-                                                    <include reference="Y7C-vH-bmh"/>
+                                                    <include reference="4hK-cG-CWY"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="Cidade" destination="Y7C-vH-bmh" id="LM0-Rq-AWC"/>
-                                            <segue destination="xeG-XD-FXV" kind="show" identifier="TeatrosReuseIdentifier" id="J0O-Wj-A9x"/>
+                                            <outlet property="Cidade" destination="4hK-cG-CWY" id="anA-ex-G9H"/>
+                                            <segue destination="xeG-XD-FXV" kind="show" identifier="GoToTeatro" id="J0O-Wj-A9x"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="-3" y="0.0" width="414" height="382"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="vXZ-lx-hvc" id="rFI-N3-KiW"/>
@@ -90,20 +90,19 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="lT6-KJ-Zna"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="Cidades" destination="iWb-Bc-m42" id="FOV-Y0-S20"/>
-                        <outlet property="Teatros" destination="PMd-cW-FYa" id="CbO-nv-iTn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1269" y="678.75"/>
+            <point key="canvasLocation" x="1267.5" y="678"/>
         </scene>
-        <!--View Controller-->
+        <!--Table View2VC-->
         <scene sceneID="qHE-fv-ttU">
             <objects>
-                <viewController id="xeG-XD-FXV" customClass="ViewController" customModule="maps_swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xeG-XD-FXV" customClass="TableView2VC" customModule="maps_swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ozd-ia-eLF"/>
                         <viewControllerLayoutGuide type="bottom" id="AvL-l3-za8"/>
@@ -144,13 +143,17 @@
                                             </variation>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="Teatros" destination="8CR-T9-BnW" id="C03-6X-kf2"/>
+                                            <outlet property="Teatro" destination="8CR-T9-BnW" id="6ru-Cx-B9p"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="408"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="742"/>
                                 </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="xeG-XD-FXV" id="u8b-d2-z5r"/>
+                                    <outlet property="delegate" destination="xeG-XD-FXV" id="MmU-jV-ac9"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -165,20 +168,20 @@
                             </mask>
                         </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="Teatros" destination="S49-Cf-oSi" id="0M5-Dc-Ycs"/>
+                        <outlet property="Teatros" destination="S49-Cf-oSi" id="PH8-sb-fbc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rEe-9K-vtc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2010.75" y="678.375"/>
+            <point key="canvasLocation" x="2010" y="678"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jZe-Ap-SL8">
             <objects>
                 <navigationController id="i6h-sy-5ws" sceneMemberID="viewController">
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Af-vB-y8g">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

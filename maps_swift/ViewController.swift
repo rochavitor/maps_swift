@@ -1,5 +1,6 @@
 
 import UIKit
+import Foundation
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -16,15 +17,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     ///Primeira table view. Contém as cidades
     @IBOutlet weak var Cidades: UITableView!
+    
     ///Identifier da célula da tableview Cidades
     let CidadeReuseIdentifier: String = "CidadeReuseIdentifier"
     
-    /*
-///Segunda table view. Com os teatros
-    @IBOutlet weak var Teatros: UITableView!
-    ///Identifier da célula da tableview Teatros
-    let TeatrosReuseIdentifier: String = "TeatrosReuseIdentifier"
-    */
     
     ///Controla a cidade que vai ser chamada pela tableview Teatros
     var CidadeEscolhida = "nill"
@@ -46,16 +42,34 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //Iguala o texto da label Cidade, da celula, ao nome da Cidade do mesmo indexPath da ListaCidades
         Celula.Cidade.text = ListaCidades[indexPath.row]
         
-        return CelulaCidades()
+        return Celula
     }
-    
+    /*
     //Faz com que cidade escolhida recebe o número da linha clicada, para depois usarmos para escolher a outra lista a ser utilizada na outra tableview
     func tableView(Cidades: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
         CidadeEscolhida = ListaCidades[indexPath.row]
         println(ListaCidades[indexPath.row])
         }
+    */
     
-    
+    //Fala o que fazer caso o segue GoToFuture seja selecionado
+    override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
+        if (segue!.identifier == "GoToTeatro") {
+            
+            //declar o indexPath. Ele puxa o index da célula selecionada da tableView Cidades
+            let indexPath = Cidades.indexPathForSelectedRow()
+           
+            
+            //Usa o index recebido para escolher qual item da ListaCidades deve ser passado para a CidadeEscolhida, declarada na viewController seguinte
+            CidadeEscolhida = ListaCidades[indexPath!.row]
+            
+            
+            //Escolhe a próxima view controller a ser mostrada
+            let tableView2VC:TableView2VC = segue!.destinationViewController as! TableView2VC
+            
+            
+        }
+    }
     
 }
 

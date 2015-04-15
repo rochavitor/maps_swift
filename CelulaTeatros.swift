@@ -10,8 +10,9 @@ import UIKit
 
 class CelulaTeatros: UITableViewCell {
 
+   
 
-    @IBOutlet weak var Teatros: UILabel!
+    @IBOutlet weak var Teatro: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,4 +25,3 @@ class CelulaTeatros: UITableViewCell {
     }
 
 }
-//hue
