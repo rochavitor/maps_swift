@@ -148,7 +148,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="742"/>
+                                    <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="xeG-XD-FXV" id="u8b-d2-z5r"/>
@@ -175,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rEe-9K-vtc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2010" y="678"/>
+            <point key="canvasLocation" x="2275.5" y="678"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jZe-Ap-SL8">
