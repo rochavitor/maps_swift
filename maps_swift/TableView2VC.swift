@@ -146,5 +146,30 @@ func tableView(Teatros: UITableView, didDeselectRowAtIndexPath indexPath: NSInde
 
     
 }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
+        if (segue!.identifier == "GoToTeatro") {
+            
+            //declar o indexPath. Ele puxa o index da célula selecionada da tableView Cidades
+            let indexPath = Teatros.indexPathForSelectedRow()
+            
+            
+            //Usa o index recebido para escolher qual item da ListaCidades deve ser passado para a CidadeEscolhida, declarada na viewController seguinte
+            CidadeEscolhida = ListaCidades[indexPath!.row]
+            
+            
+            //Escolhe a próxima view controller a ser mostrada
+            let tableView2VC:TableView2VC = segue!.destinationViewController as! TableView2VC
+            tableView2VC.Escolhida = CidadeEscolhida
+            
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
 }
 
