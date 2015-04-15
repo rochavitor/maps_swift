@@ -44,13 +44,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         return Celula
     }
-    /*
-    //Faz com que cidade escolhida recebe o número da linha clicada, para depois usarmos para escolher a outra lista a ser utilizada na outra tableview
-    func tableView(Cidades: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        CidadeEscolhida = ListaCidades[indexPath.row]
-        println(ListaCidades[indexPath.row])
-        }
-    */
     
     //Fala o que fazer caso o segue GoToFuture seja selecionado
     override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
@@ -66,7 +59,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             //Escolhe a próxima view controller a ser mostrada
             let tableView2VC:TableView2VC = segue!.destinationViewController as! TableView2VC
-            
+            tableView2VC.Escolhida = CidadeEscolhida
             
         }
     }

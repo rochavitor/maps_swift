@@ -11,7 +11,23 @@ import UIKit
 
 
 class TableView2VC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    ///Váriavel que recebe da ViewController a CidadeEscolhida, através do segue
+    var Escolhida: String?
 
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        println(Escolhida)
+    
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
     
 @IBOutlet weak var Teatros: UITableView!
@@ -19,7 +35,7 @@ class TableView2VC: UIViewController, UITableViewDelegate, UITableViewDataSource
 let TeatrosReuseIdentifier: String = "TeatrosReuseIdentifier"
     
 
-///TableView para os Teatros
+///Arrays de cada cidade
 var Campinas = ["Castro Mendes", "Casarão", "Casa do Lago", "Lume"]
 var SaoPaulo = ["Centro Cultural", "Teatro Municipal"]
 var Holambra = ["Teatro Moinho", "Teatro Flores"]
@@ -27,20 +43,20 @@ var Jacarei = ["EducaMais"]
 var Paulinia = ["Teatro Municipal"]
     
     
-//Váriavel que vai ser urilizada para trazer CidadeEscolhida e ListaCidades
-let Escolha = ViewController()
-    
+
+
     
 //Define a TableView para os teatros
 func tableView(Teatros: UITableView, numberOfRowsInSection section: Int) -> Int {
     
+    
     //Informa os itens de qual lista devem ser contados para exibir
-    switch(Escolha.CidadeEscolhida){
+    switch Escolhida! {
         
     case "Campinas":
         return Campinas.count
         
-    case "S˜o Paulo":
+    case "São Paulo":
         return SaoPaulo.count
         
     case "Holambra":
@@ -54,7 +70,7 @@ func tableView(Teatros: UITableView, numberOfRowsInSection section: Int) -> Int 
         
     default:
         //Conta a lista de cidades
-        return Escolha.ListaCidades.count
+        return Campinas.count
         
     }
 }
@@ -63,51 +79,45 @@ func tableView(Teatros: UITableView, numberOfRowsInSection section: Int) -> Int 
 ///Define o conteúdo de cada célula, conforme seu indexPath (número da linha)
 func tableView(Teatros: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     
+    let Celula: CelulaTeatros = self.Teatros.dequeueReusableCellWithIdentifier(TeatrosReuseIdentifier, forIndexPath: indexPath) as! CelulaTeatros
     
     //Escolhe qual lista será exibida, declara e cria a célula a partir da célula definida em CelulaTeatros
-    switch(Escolha.CidadeEscolhida){
+    switch Escolhida! {
         
     case "Campinas":
-        let Celula: CelulaTeatros = self.Teatros.dequeueReusableCellWithIdentifier(TeatrosReuseIdentifier, forIndexPath: indexPath) as! CelulaTeatros
         //Iguala o texto da label Cidade, da celula, ao nome do Teatro do mesmo indexPath da lista escolhida
         Celula.Teatro.text = Campinas[indexPath.row]
         
     case "São Paulo":
-        let Celula: CelulaTeatros = self.Teatros.dequeueReusableCellWithIdentifier(TeatrosReuseIdentifier, forIndexPath: indexPath) as! CelulaTeatros
         //Iguala o texto da label Cidade, da celula, ao nome do Teatro do mesmo indexPath da lista escolhida
         Celula.Teatro.text = SaoPaulo[indexPath.row]
         
     case "Holambra":
-        let Celula: CelulaTeatros = self.Teatros.dequeueReusableCellWithIdentifier(TeatrosReuseIdentifier, forIndexPath: indexPath) as! CelulaTeatros
         //Iguala o texto da label Cidade, da celula, ao nome do Teatro do mesmo indexPath da lista escolhida
         Celula.Teatro.text = Holambra[indexPath.row]
         
     case "Jacareí":
-        let Celula: CelulaTeatros = self.Teatros.dequeueReusableCellWithIdentifier(TeatrosReuseIdentifier, forIndexPath: indexPath) as! CelulaTeatros
         //Iguala o texto da label Cidade, da celula, ao nome do Teatro do mesmo indexPath da lista escolhida
         Celula.Teatro.text = Jacarei[indexPath.row]
         
     case "Paulínia":
-        let Celula: CelulaTeatros = self.Teatros.dequeueReusableCellWithIdentifier(TeatrosReuseIdentifier, forIndexPath: indexPath) as! CelulaTeatros
         //Iguala o texto da label Cidade, da celula, ao nome do Teatro do mesmo indexPath da lista escolhida
         Celula.Teatro.text = Paulinia[indexPath.row]
         
     default:
-        ///Em caso de cidade errada mostra a lista de Cidades
-        let Celula: CelulaTeatros = self.Teatros.dequeueReusableCellWithIdentifier(TeatrosReuseIdentifier, forIndexPath: indexPath) as! CelulaTeatros
         //Iguala o texto da label Cidade, da celula, ao nome da Cidade do mesmo indexPath da ListaCidades
-        Celula.Teatro.text = Escolha.ListaCidades[indexPath.row]
+        Celula.Teatro.text = Campinas[indexPath.row]
         
     }
     
     
-    return CelulaTeatros()
+    return Celula
 }
 
 ///Faz com que cidade escolhida recebe o número da linha clicada, para depois usarmos para escolher a outra lista a ser utilizada na outra tableview
 func tableView(Teatros: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
     
-    switch(Escolha.CidadeEscolhida){
+    switch Escolhida! {
         
     case "Campinas":
         //CidadeEscolhida = indexPath.row
@@ -130,10 +140,10 @@ func tableView(Teatros: UITableView, didDeselectRowAtIndexPath indexPath: NSInde
         println(Paulinia[indexPath.row])
         
     default:
-        println(Escolha.ListaCidades[indexPath.row])
+        println(Campinas[indexPath.row])
         
     }
-    
+
     
 }
 }
