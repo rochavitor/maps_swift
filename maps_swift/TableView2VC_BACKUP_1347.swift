@@ -116,8 +116,13 @@ func tableView(Teatros: UITableView, cellForRowAtIndexPath indexPath: NSIndexPat
 }
 
     
+<<<<<<< .merge_file_dZk0up
+  /*  override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
+        if (segue!.identifier == "GoToTeatro") {
+=======
     override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
         if (segue!.identifier == "GoToMaps") {
+>>>>>>> .merge_file_RMKqmP
             
             //declara o indexPath. Ele puxa o index da célula selecionada da tableView Cidades
             let indexPath = Teatros.indexPathForSelectedRow()
@@ -161,7 +166,7 @@ func tableView(Teatros: UITableView, cellForRowAtIndexPath indexPath: NSIndexPat
             mapViewVC.address = TeatroEscolhido
             
         }
-    }
+    }*/
     
     
     
