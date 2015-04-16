@@ -37,11 +37,11 @@ let TeatrosReuseIdentifier: String = "TeatrosReuseIdentifier"
     
 
 ///Arrays de cada cidade
-var Campinas = ["Castro Mendes", "Casarão", "Casa do Lago", "Lume"]
-var SaoPaulo = ["Centro Cultural", "Teatro Municipal"]
+var Campinas = [["Castro Mendes", "Praça Correa de Lemos, Campinas, São Paulo, Brasil"], ["Casarão", "Rua Maria Ribeiro Sampaio Reginato, Campinas, São Paulo, Brasil"], ["Casa do Lago", "Avenida Érico Veríssimo, 1011, Campinas, São Paulo, Brasil"], ["Lume", "Rua Carlos Diniz Leitão, 150"]]
+var SaoPaulo = [["Centro Cultural São Paulo", "Rua Vergueiro 1000, São Paulo, São Paulo, Brasil"], ["Teatro Municipal", "Praça Ramos de Azevedo, São Paulo, São Paulo, Brasil"]]
 var Holambra = ["Teatro Moinho", "Teatro Flores"]
 var Jacarei = [["EducaMais", "Avenida Davi Lino , 595, Jacareí, São Paulo, Brasil"]]
-var Paulinia = ["Teatro Municipal"]
+var Paulinia = [["Teatro Municipal", "Avenida José Lozano de Araújo, 1551, Paulínia, São Paulo, Brasil"]]
     
     
 
@@ -87,11 +87,11 @@ func tableView(Teatros: UITableView, cellForRowAtIndexPath indexPath: NSIndexPat
         
     case "Campinas":
         //Iguala o texto da label Cidade, da celula, ao nome do Teatro do mesmo indexPath da lista escolhida
-        Celula.Teatro.text = Campinas[indexPath.row]
+        Celula.Teatro.text = Campinas[indexPath.row][0]
         
     case "São Paulo":
         //Iguala o texto da label Cidade, da celula, ao nome do Teatro do mesmo indexPath da lista escolhida
-        Celula.Teatro.text = SaoPaulo[indexPath.row]
+        Celula.Teatro.text = SaoPaulo[indexPath.row][0]
         
     case "Holambra":
         //Iguala o texto da label Cidade, da celula, ao nome do Teatro do mesmo indexPath da lista escolhida
@@ -103,11 +103,11 @@ func tableView(Teatros: UITableView, cellForRowAtIndexPath indexPath: NSIndexPat
         
     case "Paulínia":
         //Iguala o texto da label Cidade, da celula, ao nome do Teatro do mesmo indexPath da lista escolhida
-        Celula.Teatro.text = Paulinia[indexPath.row]
+        Celula.Teatro.text = Paulinia[indexPath.row][0]
         
     default:
         //Iguala o texto da label Cidade, da celula, ao nome da Cidade do mesmo indexPath da ListaCidades
-        Celula.Teatro.text = Campinas[indexPath.row]
+        Celula.Teatro.text = Campinas[indexPath.row][0]
         
     }
     
@@ -129,11 +129,11 @@ func tableView(Teatros: UITableView, cellForRowAtIndexPath indexPath: NSIndexPat
                 
             case "Campinas":
                 //CidadeEscolhida = indexPath.row
-                TeatroEscolhido = Campinas[indexPath!.row]
+                TeatroEscolhido = Campinas[indexPath!.row][1]
                 
             case "São Paulo":
                 //CidadeEscolhida = indexPath.row
-                TeatroEscolhido = SaoPaulo[indexPath!.row]
+                TeatroEscolhido = SaoPaulo[indexPath!.row][1]
                 
             case "Holambra":
                 //CidadeEscolhida = indexPath.row
@@ -145,10 +145,10 @@ func tableView(Teatros: UITableView, cellForRowAtIndexPath indexPath: NSIndexPat
                 
             case "Paulínia":
                 //CidadeEscolhida = indexPath.row
-                TeatroEscolhido = Paulinia[indexPath!.row]
+                TeatroEscolhido = Paulinia[indexPath!.row][1]
                 
             default:
-                TeatroEscolhido = Campinas[indexPath!.row]
+                TeatroEscolhido = Campinas[indexPath!.row][1]
                 
             }
             

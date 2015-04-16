@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class MapViewVC: UIViewController, MKMapViewDelegate,{
+class MapViewVC: UIViewController, MKMapViewDelegate{
     
     ///variável de endereço, vai receber o valor do teatro selecionado. Criei sem valor, para conseguir setar lá do TableViewVC
     var address: String?
