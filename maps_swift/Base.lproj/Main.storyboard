@@ -42,10 +42,10 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hK-cG-CWY">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="8" y="31" width="42" height="21"/>
+                                                        <rect key="frame" x="8" y="31" width="391" height="21"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
@@ -90,14 +90,14 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="lT6-KJ-Zna"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="Cidades" destination="iWb-Bc-m42" id="FOV-Y0-S20"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="355.5" y="1368"/>
+            <point key="canvasLocation" x="1267.5" y="678"/>
         </scene>
         <!--Table View2VC-->
         <scene sceneID="qHE-fv-ttU">
@@ -144,7 +144,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="Teatro" destination="8CR-T9-BnW" id="6ru-Cx-B9p"/>
-                                            <segue destination="4mA-y3-cfJ" kind="show" identifier="GoToMaps" id="4Ig-ch-Pfw"/>
+                                            <segue destination="9rI-eA-2h7" kind="show" identifier="GoToMaps" id="ufQ-Hs-SOQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -169,32 +169,57 @@
                             </mask>
                         </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="Teatros" destination="S49-Cf-oSi" id="PH8-sb-fbc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rEe-9K-vtc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1369.5" y="1368"/>
+            <point key="canvasLocation" x="2275.5" y="678"/>
         </scene>
-        <!--MapsVC-->
-        <scene sceneID="g3A-jl-yFa">
+        <!--Map ViewVC-->
+        <scene sceneID="mNm-4c-8Ot">
             <objects>
-                <viewController id="4mA-y3-cfJ" customClass="MapsVC" customModule="maps_swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9rI-eA-2h7" customClass="MapViewVC" customModule="maps_swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="U5Q-02-h27"/>
-                        <viewControllerLayoutGuide type="bottom" id="KQl-q9-hus"/>
+                        <viewControllerLayoutGuide type="top" id="UbD-Ui-luu"/>
+                        <viewControllerLayoutGuide type="bottom" id="4kx-H0-kVF"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="WEg-49-hfo">
+                    <view key="view" contentMode="scaleToFill" id="ljD-g0-4uQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mve-MW-Hl8">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="-37" width="375" height="667"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="9rI-eA-2h7" id="PUE-3T-hLM"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="mve-MW-Hl8"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="mve-MW-Hl8"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="MapView" destination="mve-MW-Hl8" id="x3I-fK-1Hb"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eJY-5h-FKh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lk9-09-xF0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1369.5" y="678.75"/>
+            <point key="canvasLocation" x="3098.25" y="677.625"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jZe-Ap-SL8">

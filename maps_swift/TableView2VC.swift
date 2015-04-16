@@ -113,45 +113,68 @@ func tableView(Teatros: UITableView, cellForRowAtIndexPath indexPath: NSIndexPat
     
     return Celula
 }
+
+///Faz com que cidade escolhida recebe o número da linha clicada, para depois usarmos para escolher a outra lista a ser utilizada na outra tableview
+func tableView(Teatros: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
     
+    switch Escolhida! {
+        
+    case "Campinas":
+        //CidadeEscolhida = indexPath.row
+        println(Campinas[indexPath.row])
+        
+    case "SaoPaulo":
+        //CidadeEscolhida = indexPath.row
+        println(SaoPaulo[indexPath.row])
+        
+    case "Holambra":
+        //CidadeEscolhida = indexPath.row
+        println(Holambra[indexPath.row])
+        
+    case "Jacarei":
+        //CidadeEscolhida = indexPath.row
+        println(Jacarei[indexPath.row])
+        
+    case "Paulinia":
+        //CidadeEscolhida = indexPath.row
+        println(Paulinia[indexPath.row])
+        
+    default:
+        println(Campinas[indexPath.row])
+        
+    }
+
     
-    //Fala o que fazer caso o segue GoToMaps seja selecionado
+}
+    
     override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
-        if (segue!.identifier == "GoToMaps") {
+        if (segue!.identifier == "GoToTeatro") {
             
-            //declar o indexPath. Ele puxa o index da célula selecionada da tableView Teatros
+            
+            //Necessario codificar o prepareforsegue para pegar o endereço do teatro selecionado e jogar na variavel address do MapViewVC para o Maps abrir com este endereço selecionado.
+           
+            
+            /*
+            //declar o indexPath. Ele puxa o index da célula selecionada da tableView Cidades
             let indexPath = Teatros.indexPathForSelectedRow()
             
-            //Escolhe qual lista está sendo mostrada e de que cidade deve ser puxada a informação
-            switch Escolhida! {
-                
-            //Usa o index recebido para escolher qual item da Cidade Escolhida foi clicado
-                
-            case "Campinas":
-                let TeatroEscolhido = Campinas[indexPath!.row]
-                
-            case "São Paulo":
-                let TeatroEscolhido = SaoPaulo[indexPath!.row]
-                
-            case "Holambra":
-                let TeatroEscolhido = Holambra[indexPath!.row]
-                
-            case "Jacareí":
-                let TeatroEscolhido = Jacarei[indexPath!.row]
-                
-            case "Paulínia":
-                let TeatroEscolhido = Paulinia[indexPath!.row]
-                
-            default:
-                let TeatroEscolhido = Campinas[indexPath!.row]
+            
+            //Usa o index recebido para escolher qual item da ListaCidades deve ser passado para a CidadeEscolhida, declarada na viewController seguinte
+            CidadeEscolhida = ListaCidades[indexPath!.row]
             
             
             //Escolhe a próxima view controller a ser mostrada
-            let mapsVC:MapsVC = segue!.destinationViewController as! MapsVC
-            //Aqui teria que colocar o que vamos passar para a proxima VC de informaçao. Tipo o endereço do teatro, que ela vai pegar e mandar pro maps, ou fazer o aminho
-            //TeatroEscolhido.Endereco
+            let mapViewVC:MapViewVC = segue!.destinationViewController as! MapViewVC
+            mapViewVC.Escolhida = CidadeEscolhida*/
+            
         }
     }
-
-    }
+    
+    
+    
+    
+    
+    
+    
 }
+

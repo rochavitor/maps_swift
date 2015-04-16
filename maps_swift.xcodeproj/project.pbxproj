@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DA2D573F1ADDB1C300367059 /* TableView2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D573E1ADDB1C300367059 /* TableView2VC.swift */; };
-		FF5237A01ADEBB2D0090D72F /* MapsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF52379F1ADEBB2D0090D72F /* MapsVC.swift */; };
+		DAB415AF1ADED0ED00C58B39 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB415AE1ADED0ED00C58B39 /* MapKit.framework */; };
+		DAE9BE0E1ADEF4F900980C92 /* MapViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE9BE0D1ADEF4F900980C92 /* MapViewVC.swift */; };
 		FF8490671ADD498800AD77AB /* CelulaCidades.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8490661ADD498800AD77AB /* CelulaCidades.swift */; };
 		FF8490691ADD4A4400AD77AB /* CelulaTeatros.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8490681ADD4A4400AD77AB /* CelulaTeatros.swift */; };
 		FFEFEFA01ADD35A800E6CD0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEFEF9F1ADD35A800E6CD0E /* AppDelegate.swift */; };
@@ -31,7 +32,8 @@
 
 /* Begin PBXFileReference section */
 		DA2D573E1ADDB1C300367059 /* TableView2VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView2VC.swift; sourceTree = "<group>"; };
-		FF52379F1ADEBB2D0090D72F /* MapsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsVC.swift; sourceTree = "<group>"; };
+		DAB415AE1ADED0ED00C58B39 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DAE9BE0D1ADEF4F900980C92 /* MapViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewVC.swift; sourceTree = "<group>"; };
 		FF8490661ADD498800AD77AB /* CelulaCidades.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CelulaCidades.swift; sourceTree = "<group>"; };
 		FF8490681ADD4A4400AD77AB /* CelulaTeatros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CelulaTeatros.swift; path = ../CelulaTeatros.swift; sourceTree = "<group>"; };
 		FFEFEF9A1ADD35A800E6CD0E /* maps_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = maps_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAB415AF1ADED0ED00C58B39 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +70,7 @@
 		FFEFEF911ADD35A800E6CD0E = {
 			isa = PBXGroup;
 			children = (
+				DAB415AE1ADED0ED00C58B39 /* MapKit.framework */,
 				FFEFEF9C1ADD35A800E6CD0E /* maps_swift */,
 				FFEFEFB21ADD35A900E6CD0E /* maps_swiftTests */,
 				FFEFEF9B1ADD35A800E6CD0E /* Products */,
@@ -91,7 +95,7 @@
 				FFEFEF9F1ADD35A800E6CD0E /* AppDelegate.swift */,
 				FFEFEFA11ADD35A800E6CD0E /* ViewController.swift */,
 				DA2D573E1ADDB1C300367059 /* TableView2VC.swift */,
-				FF52379F1ADEBB2D0090D72F /* MapsVC.swift */,
+				DAE9BE0D1ADEF4F900980C92 /* MapViewVC.swift */,
 				FFEFEFA61ADD35A800E6CD0E /* Images.xcassets */,
 				FFEFEFA81ADD35A800E6CD0E /* LaunchScreen.xib */,
 				FFEFEF9D1ADD35A800E6CD0E /* Supporting Files */,
@@ -228,8 +232,8 @@
 				FFEFEFA21ADD35A800E6CD0E /* ViewController.swift in Sources */,
 				FFEFEFA01ADD35A800E6CD0E /* AppDelegate.swift in Sources */,
 				FF8490691ADD4A4400AD77AB /* CelulaTeatros.swift in Sources */,
+				DAE9BE0E1ADEF4F900980C92 /* MapViewVC.swift in Sources */,
 				FF8490671ADD498800AD77AB /* CelulaCidades.swift in Sources */,
-				FF5237A01ADEBB2D0090D72F /* MapsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
