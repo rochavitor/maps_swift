@@ -37,7 +37,7 @@ let TeatrosReuseIdentifier: String = "TeatrosReuseIdentifier"
     
 
 ///Arrays de cada cidade
-var Campinas = [["Castro Mendes", "Praça Correa de Lemos, Campinas, São Paulo, Brasil"], ["Casarão", "Rua Maria Ribeiro Sampaio Reginato, Campinas, São Paulo, Brasil"], ["Casa do Lago", "Avenida Érico Veríssimo, 1011, Campinas, São Paulo, Brasil"], ["Lume", "Rua Carlos Diniz Leitão, 150"]]
+var Campinas = [["Castro Mendes", "Rua Conselheiro Gomide, 62 , Campinas, São Paulo, Brasil"], ["Casarão", "Rua Maria Ribeiro Sampaio Reginato, Campinas, São Paulo, Brasil"], ["Casa do Lago", "Avenida Érico Veríssimo, 1011, Campinas, São Paulo, Brasil"], ["Lume", "Rua Carlos Diniz Leitão, 150"]]
 var SaoPaulo = [["Centro Cultural São Paulo", "Rua Vergueiro 1000, São Paulo, São Paulo, Brasil"], ["Teatro Municipal", "Praça Ramos de Azevedo, São Paulo, São Paulo, Brasil"]]
 var Holambra = ["Teatro Moinho", "Teatro Flores"]
 var Jacarei = [["EducaMais", "Avenida Davi Lino , 595, Jacareí, São Paulo, Brasil"]]
