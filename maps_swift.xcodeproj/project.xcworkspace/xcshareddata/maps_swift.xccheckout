@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>802F53F0-F0EF-448B-8D66-3EA848D9C414</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>maps_swift</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>514D28E7025B7BCD57A0FEE2B4BCA8A4B9ADB48E</key>
 		<string>https://github.com/rochavitor/maps_swift.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>maps_swift.xcodeproj/project.xcworkspace</string>
+	<string>maps_swift.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>514D28E7025B7BCD57A0FEE2B4BCA8A4B9ADB48E</key>

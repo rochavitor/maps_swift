@@ -14,6 +14,7 @@ class TableView2VC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     ///Váriavel que recebe da ViewController a CidadeEscolhida, através do segue
     var Escolhida: String?
+    var TeatroEscolhido = "nill"
 
     
     override func viewDidLoad() {
@@ -39,7 +40,7 @@ let TeatrosReuseIdentifier: String = "TeatrosReuseIdentifier"
 var Campinas = ["Castro Mendes", "Casarão", "Casa do Lago", "Lume"]
 var SaoPaulo = ["Centro Cultural", "Teatro Municipal"]
 var Holambra = ["Teatro Moinho", "Teatro Flores"]
-var Jacarei = ["EducaMais"]
+var Jacarei = [["EducaMais", "Avenida Davi Lino , 595, Jacareí, São Paulo, Brasil"]]
 var Paulinia = ["Teatro Municipal"]
     
     
@@ -98,7 +99,7 @@ func tableView(Teatros: UITableView, cellForRowAtIndexPath indexPath: NSIndexPat
         
     case "Jacareí":
         //Iguala o texto da label Cidade, da celula, ao nome do Teatro do mesmo indexPath da lista escolhida
-        Celula.Teatro.text = Jacarei[indexPath.row]
+        Celula.Teatro.text = Jacarei[indexPath.row][0]
         
     case "Paulínia":
         //Iguala o texto da label Cidade, da celula, ao nome do Teatro do mesmo indexPath da lista escolhida
@@ -114,58 +115,48 @@ func tableView(Teatros: UITableView, cellForRowAtIndexPath indexPath: NSIndexPat
     return Celula
 }
 
-///Faz com que cidade escolhida recebe o número da linha clicada, para depois usarmos para escolher a outra lista a ser utilizada na outra tableview
-func tableView(Teatros: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-    
-    switch Escolhida! {
-        
-    case "Campinas":
-        //CidadeEscolhida = indexPath.row
-        println(Campinas[indexPath.row])
-        
-    case "SaoPaulo":
-        //CidadeEscolhida = indexPath.row
-        println(SaoPaulo[indexPath.row])
-        
-    case "Holambra":
-        //CidadeEscolhida = indexPath.row
-        println(Holambra[indexPath.row])
-        
-    case "Jacarei":
-        //CidadeEscolhida = indexPath.row
-        println(Jacarei[indexPath.row])
-        
-    case "Paulinia":
-        //CidadeEscolhida = indexPath.row
-        println(Paulinia[indexPath.row])
-        
-    default:
-        println(Campinas[indexPath.row])
-        
-    }
-
-    
-}
     
     override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
-        if (segue!.identifier == "GoToTeatro") {
+        if (segue!.identifier == "GoToMaps") {
             
-            
-            //Necessario codificar o prepareforsegue para pegar o endereço do teatro selecionado e jogar na variavel address do MapViewVC para o Maps abrir com este endereço selecionado.
-           
-            
-            /*
-            //declar o indexPath. Ele puxa o index da célula selecionada da tableView Cidades
+            //declara o indexPath. Ele puxa o index da célula selecionada da tableView Cidades
             let indexPath = Teatros.indexPathForSelectedRow()
             
             
-            //Usa o index recebido para escolher qual item da ListaCidades deve ser passado para a CidadeEscolhida, declarada na viewController seguinte
-            CidadeEscolhida = ListaCidades[indexPath!.row]
+            //Necessario codificar o prepareforsegue para pegar o endereço do teatro selecionado e jogar na variavel address do MapViewVC para o Maps abrir com este endereço selecionado.
+            
+            switch Escolhida! {
+                
+            case "Campinas":
+                //CidadeEscolhida = indexPath.row
+                TeatroEscolhido = Campinas[indexPath!.row]
+                
+            case "São Paulo":
+                //CidadeEscolhida = indexPath.row
+                TeatroEscolhido = SaoPaulo[indexPath!.row]
+                
+            case "Holambra":
+                //CidadeEscolhida = indexPath.row
+                TeatroEscolhido = Holambra[indexPath!.row]
+                
+            case "Jacareí":
+                //CidadeEscolhida = indexPath.row
+                TeatroEscolhido = Jacarei[indexPath!.row][1]
+                
+            case "Paulínia":
+                //CidadeEscolhida = indexPath.row
+                TeatroEscolhido = Paulinia[indexPath!.row]
+                
+            default:
+                TeatroEscolhido = Campinas[indexPath!.row]
+                
+            }
+            
             
             
             //Escolhe a próxima view controller a ser mostrada
             let mapViewVC:MapViewVC = segue!.destinationViewController as! MapViewVC
-            mapViewVC.Escolhida = CidadeEscolhida*/
+            mapViewVC.address = TeatroEscolhido
             
         }
     }
