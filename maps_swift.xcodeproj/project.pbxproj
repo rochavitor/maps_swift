@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		854803D21AE03E6B00704E39 /* TEMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854803D11AE03E6B00704E39 /* TEMapView.swift */; };
 		DA2D573F1ADDB1C300367059 /* TableView2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D573E1ADDB1C300367059 /* TableView2VC.swift */; };
 		DAB415AF1ADED0ED00C58B39 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB415AE1ADED0ED00C58B39 /* MapKit.framework */; };
 		DAE9BE0E1ADEF4F900980C92 /* MapViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE9BE0D1ADEF4F900980C92 /* MapViewVC.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		854803D11AE03E6B00704E39 /* TEMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TEMapView.swift; sourceTree = "<group>"; };
 		DA2D573E1ADDB1C300367059 /* TableView2VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView2VC.swift; sourceTree = "<group>"; };
 		DAB415AE1ADED0ED00C58B39 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DAE9BE0D1ADEF4F900980C92 /* MapViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewVC.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				FFEFEF9E1ADD35A800E6CD0E /* Info.plist */,
+				854803D11AE03E6B00704E39 /* TEMapView.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				FFEFEFA21ADD35A800E6CD0E /* ViewController.swift in Sources */,
 				FFEFEFA01ADD35A800E6CD0E /* AppDelegate.swift in Sources */,
 				FF8490691ADD4A4400AD77AB /* CelulaTeatros.swift in Sources */,
+				854803D21AE03E6B00704E39 /* TEMapView.swift in Sources */,
 				DAE9BE0E1ADEF4F900980C92 /* MapViewVC.swift in Sources */,
 				FF8490671ADD498800AD77AB /* CelulaCidades.swift in Sources */,
 			);
