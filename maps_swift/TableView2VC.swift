@@ -128,7 +128,7 @@ func tableView(Teatros: UITableView, cellForRowAtIndexPath indexPath: NSIndexPat
             switch Escolhida! {
                 
             case "Campinas":
-                //CidadeEscolhida = indexPath.row
+                //Passa
                 TeatroEscolhido = Campinas[indexPath!.row][1]
                 
             case "São Paulo":
@@ -156,6 +156,8 @@ func tableView(Teatros: UITableView, cellForRowAtIndexPath indexPath: NSIndexPat
             
             //Escolhe a próxima view controller a ser mostrada
             let mapViewVC:MapViewVC = segue!.destinationViewController as! MapViewVC
+            
+            //Passa o endereço paa a variável que o maps utiliza
             mapViewVC.address = TeatroEscolhido
             
         }

@@ -11,19 +11,17 @@ import MapKit
 
 class MapViewVC: UIViewController, MKMapViewDelegate{
     
-    ///variável de endereço, vai receber o valor do teatro selecionado. Criei sem valor, para conseguir setar lá do TableViewVC
+    ///Variável de endereço, vai receber o valor do teatro selecionado. Criei sem valor, para conseguir setar lá do TableViewVC
     var address: String?
+    
+    
     
     //cria um outlet que sai da lista de teatros pro mapa
     @IBOutlet weak var MapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        println(address)
-        
-        
-        
-        //var address = "RUA RODOLFO GOTTARDELLO, CAMPINAS, SAO PAULO, BRASIL"
+
         //inicia um geocoder
         var geocoder = CLGeocoder()
         //variáveis das restrições de distância do ponto inicial
@@ -61,6 +59,7 @@ class MapViewVC: UIViewController, MKMapViewDelegate{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     
     
 }
