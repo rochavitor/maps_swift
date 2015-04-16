@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="i6h-sy-5ws">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -66,26 +67,44 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="vXZ-lx-hvc" id="rFI-N3-KiW"/>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="YSG-T3-ZUl"/>
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="iWb-Bc-m42" secondAttribute="bottom" constant="-69" id="EVu-oR-hBb">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="iWb-Bc-m42" secondAttribute="trailing" constant="-39" id="HO6-G7-C2v">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="iWb-Bc-m42" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="RYk-e9-5A5"/>
+                            <constraint firstItem="iWb-Bc-m42" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="iGG-QL-8Nb"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="PMd-cW-FYa"/>
                                 <exclude reference="iWb-Bc-m42"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="EVu-oR-hBb"/>
+                                <exclude reference="HO6-G7-C2v"/>
+                                <exclude reference="RYk-e9-5A5"/>
+                                <exclude reference="iGG-QL-8Nb"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <exclude reference="PMd-cW-FYa"/>
                                 <include reference="iWb-Bc-m42"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="EVu-oR-hBb"/>
+                                <include reference="HO6-G7-C2v"/>
+                                <include reference="RYk-e9-5A5"/>
+                                <include reference="iGG-QL-8Nb"/>
                             </mask>
                         </variation>
                     </view>
@@ -127,7 +146,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="49" y="26" width="285" height="21"/>
+                                                        <rect key="frame" x="8" y="26" width="285" height="21"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
@@ -148,8 +167,8 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="xeG-XD-FXV" id="u8b-d2-z5r"/>
@@ -158,17 +177,51 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="S49-Cf-oSi" firstAttribute="top" secondItem="GFa-za-rNU" secondAttribute="topMargin" id="0SM-Vr-fNw"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="S49-Cf-oSi" secondAttribute="bottom" id="DHk-4a-1xM"/>
+                            <constraint firstItem="S49-Cf-oSi" firstAttribute="leading" secondItem="GFa-za-rNU" secondAttribute="leadingMargin" id="Rtj-7D-Xkw">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="S49-Cf-oSi" secondAttribute="trailing" id="c4H-Qu-o3B"/>
+                            <constraint firstItem="S49-Cf-oSi" firstAttribute="top" secondItem="ozd-ia-eLF" secondAttribute="bottom" constant="49" id="hvs-qZ-0tC">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="S49-Cf-oSi" secondAttribute="trailing" id="xv4-fs-8Og">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="S49-Cf-oSi" firstAttribute="leading" secondItem="GFa-za-rNU" secondAttribute="leading" id="zdM-3Y-bRT"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="S49-Cf-oSi"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="0SM-Vr-fNw"/>
+                                <exclude reference="DHk-4a-1xM"/>
+                                <exclude reference="Rtj-7D-Xkw"/>
+                                <exclude reference="c4H-Qu-o3B"/>
+                                <exclude reference="hvs-qZ-0tC"/>
+                                <exclude reference="xv4-fs-8Og"/>
+                                <exclude reference="zdM-3Y-bRT"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="S49-Cf-oSi"/>
                             </mask>
+                            <mask key="constraints">
+                                <exclude reference="0SM-Vr-fNw"/>
+                                <include reference="DHk-4a-1xM"/>
+                                <exclude reference="Rtj-7D-Xkw"/>
+                                <include reference="c4H-Qu-o3B"/>
+                                <include reference="hvs-qZ-0tC"/>
+                                <exclude reference="xv4-fs-8Og"/>
+                                <include reference="zdM-3Y-bRT"/>
+                            </mask>
                         </variation>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="Teatros" destination="S49-Cf-oSi" id="PH8-sb-fbc"/>
@@ -176,7 +229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rEe-9K-vtc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2275.5" y="678"/>
+            <point key="canvasLocation" x="2261.25" y="665.625"/>
         </scene>
         <!--Map ViewVC-->
         <scene sceneID="mNm-4c-8Ot">
