@@ -178,16 +178,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="S49-Cf-oSi" firstAttribute="top" secondItem="GFa-za-rNU" secondAttribute="topMargin" id="0SM-Vr-fNw"/>
                             <constraint firstAttribute="bottomMargin" secondItem="S49-Cf-oSi" secondAttribute="bottom" id="DHk-4a-1xM"/>
-                            <constraint firstItem="S49-Cf-oSi" firstAttribute="leading" secondItem="GFa-za-rNU" secondAttribute="leadingMargin" id="Rtj-7D-Xkw">
-                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
-                            </constraint>
                             <constraint firstAttribute="trailing" secondItem="S49-Cf-oSi" secondAttribute="trailing" id="c4H-Qu-o3B"/>
                             <constraint firstItem="S49-Cf-oSi" firstAttribute="top" secondItem="ozd-ia-eLF" secondAttribute="bottom" constant="49" id="hvs-qZ-0tC">
-                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
-                            </constraint>
-                            <constraint firstAttribute="trailingMargin" secondItem="S49-Cf-oSi" secondAttribute="trailing" id="xv4-fs-8Og">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
                             <constraint firstItem="S49-Cf-oSi" firstAttribute="leading" secondItem="GFa-za-rNU" secondAttribute="leading" id="zdM-3Y-bRT"/>
@@ -197,12 +190,9 @@
                                 <exclude reference="S49-Cf-oSi"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="0SM-Vr-fNw"/>
                                 <exclude reference="DHk-4a-1xM"/>
-                                <exclude reference="Rtj-7D-Xkw"/>
                                 <exclude reference="c4H-Qu-o3B"/>
                                 <exclude reference="hvs-qZ-0tC"/>
-                                <exclude reference="xv4-fs-8Og"/>
                                 <exclude reference="zdM-3Y-bRT"/>
                             </mask>
                         </variation>
@@ -211,12 +201,9 @@
                                 <include reference="S49-Cf-oSi"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="0SM-Vr-fNw"/>
                                 <include reference="DHk-4a-1xM"/>
-                                <exclude reference="Rtj-7D-Xkw"/>
                                 <include reference="c4H-Qu-o3B"/>
                                 <include reference="hvs-qZ-0tC"/>
-                                <exclude reference="xv4-fs-8Og"/>
                                 <include reference="zdM-3Y-bRT"/>
                             </mask>
                         </variation>
