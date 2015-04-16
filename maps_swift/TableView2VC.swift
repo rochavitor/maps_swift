@@ -147,7 +147,7 @@ func tableView(Teatros: UITableView, didDeselectRowAtIndexPath indexPath: NSInde
     
 }
     
-    override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
+  /*  override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
         if (segue!.identifier == "GoToTeatro") {
             
             //declar o indexPath. Ele puxa o index da célula selecionada da tableView Cidades
@@ -163,7 +163,7 @@ func tableView(Teatros: UITableView, didDeselectRowAtIndexPath indexPath: NSInde
             tableView2VC.Escolhida = CidadeEscolhida
             
         }
-    }
+    }*/
     
     
     
