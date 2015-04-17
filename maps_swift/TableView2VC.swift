@@ -59,6 +59,7 @@ func tableView(Teatros: UITableView, numberOfRowsInSection section: Int) -> Int 
     case "São Paulo":
         return SaoPaulo.count
         
+        
     case "Jacareí":
         return Jacarei.count
         
@@ -88,6 +89,7 @@ func tableView(Teatros: UITableView, cellForRowAtIndexPath indexPath: NSIndexPat
     case "São Paulo":
         //Iguala o texto da label Cidade, da celula, ao nome do Teatro do mesmo indexPath da lista escolhida
         Celula.Teatro.text = SaoPaulo[indexPath.row][0]
+        
         
     case "Jacareí":
         //Iguala o texto da label Cidade, da celula, ao nome do Teatro do mesmo indexPath da lista escolhida
@@ -120,15 +122,16 @@ func tableView(Teatros: UITableView, cellForRowAtIndexPath indexPath: NSIndexPat
             switch Escolhida! {
                 
             case "Campinas":
-                //Passa
+                //Passa o endereço do teatro escolhido
                 TeatroEscolhido = Campinas[indexPath!.row][1]
                 
             case "São Paulo":
-                //CidadeEscolhida = indexPath.row
+                //Passa o endereço do teatro escolhido
                 TeatroEscolhido = SaoPaulo[indexPath!.row][1]
                 
+                
             case "Jacareí":
-                //CidadeEscolhida = indexPath.row
+                //Passa o endereço do teatro escolhido
                 TeatroEscolhido = Jacarei[indexPath!.row][1]
                 
             case "Paulínia":
