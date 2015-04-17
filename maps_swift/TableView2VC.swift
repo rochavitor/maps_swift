@@ -128,19 +128,19 @@ func tableView(Teatros: UITableView, cellForRowAtIndexPath indexPath: NSIndexPat
             switch Escolhida! {
                 
             case "Campinas":
-                //Passa
+                //Passa o endereço do teatro escolhido
                 TeatroEscolhido = Campinas[indexPath!.row][1]
                 
             case "São Paulo":
-                //CidadeEscolhida = indexPath.row
+                //Passa o endereço do teatro escolhido
                 TeatroEscolhido = SaoPaulo[indexPath!.row][1]
                 
             case "Holambra":
-                //CidadeEscolhida = indexPath.row
+                //Passa o endereço do teatro escolhido
                 TeatroEscolhido = Holambra[indexPath!.row]
                 
             case "Jacareí":
-                //CidadeEscolhida = indexPath.row
+                //Passa o endereço do teatro escolhido
                 TeatroEscolhido = Jacarei[indexPath!.row][1]
                 
             case "Paulínia":
