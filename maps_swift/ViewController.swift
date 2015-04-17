@@ -26,7 +26,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     ///Array com cidades
-    var ListaCidades = ["Campinas", "São Paulo", "Holambra", "Jacareí", "Paulínia"]
+    var ListaCidades = ["Campinas", "São Paulo", "Jacareí", "Paulínia"]
     
     ///Define o número de linhas da tabela e a quantidade de células, contando o número de itens da ListaCidades
     func tableView(Cidades: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -63,7 +63,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
         }
     }
-    indexPat
     
 }
 

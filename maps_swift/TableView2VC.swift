@@ -39,7 +39,6 @@ let TeatrosReuseIdentifier: String = "TeatrosReuseIdentifier"
 ///Arrays de cada cidade
 var Campinas = [["Castro Mendes", "Rua Conselheiro Gomide, 62 , Campinas, São Paulo, Brasil"], ["Casarão", "Rua Maria Ribeiro Sampaio Reginato, Campinas, São Paulo, Brasil"], ["Casa do Lago", "Avenida Érico Veríssimo, 1011, Campinas, São Paulo, Brasil"], ["Lume", "Rua Carlos Diniz Leitão, 150"]]
 var SaoPaulo = [["Centro Cultural São Paulo", "Rua Vergueiro 1000, São Paulo, São Paulo, Brasil"], ["Teatro Municipal", "Praça Ramos de Azevedo, São Paulo, São Paulo, Brasil"]]
-var Holambra = ["Teatro Moinho", "Teatro Flores"]
 var Jacarei = [["EducaMais", "Avenida Davi Lino , 595, Jacareí, São Paulo, Brasil"]]
 var Paulinia = [["Teatro Municipal", "Avenida José Lozano de Araújo, 1551, Paulínia, São Paulo, Brasil"]]
     
@@ -60,8 +59,6 @@ func tableView(Teatros: UITableView, numberOfRowsInSection section: Int) -> Int 
     case "São Paulo":
         return SaoPaulo.count
         
-    case "Holambra":
-        return Holambra.count
         
     case "Jacareí":
         return Jacarei.count
@@ -93,9 +90,6 @@ func tableView(Teatros: UITableView, cellForRowAtIndexPath indexPath: NSIndexPat
         //Iguala o texto da label Cidade, da celula, ao nome do Teatro do mesmo indexPath da lista escolhida
         Celula.Teatro.text = SaoPaulo[indexPath.row][0]
         
-    case "Holambra":
-        //Iguala o texto da label Cidade, da celula, ao nome do Teatro do mesmo indexPath da lista escolhida
-        Celula.Teatro.text = Holambra[indexPath.row]
         
     case "Jacareí":
         //Iguala o texto da label Cidade, da celula, ao nome do Teatro do mesmo indexPath da lista escolhida
@@ -135,9 +129,6 @@ func tableView(Teatros: UITableView, cellForRowAtIndexPath indexPath: NSIndexPat
                 //Passa o endereço do teatro escolhido
                 TeatroEscolhido = SaoPaulo[indexPath!.row][1]
                 
-            case "Holambra":
-                //Passa o endereço do teatro escolhido
-                TeatroEscolhido = Holambra[indexPath!.row]
                 
             case "Jacareí":
                 //Passa o endereço do teatro escolhido
